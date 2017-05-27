@@ -10,3 +10,6 @@
 [submodule "externals/serviceRGB"]
 	path = externals/serviceRGB
 	url = https://github.com/tom360v/serviceRGB
+[submodule "externals/driver_esp8266"]
+	path = externals/driver_esp8266
+	url = https://github.com/tom360v/driver_esp8266

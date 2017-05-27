@@ -1,3 +1,12 @@
 [submodule "externals/fsmEngine"]
 	path = externals/fsmEngine
 	url = http://github.com/tom360v/fsmEngine
+[submodule "externals/ServiceDispatcher"]
+	path = externals/ServiceDispatcher
+	url = http://github.com/tom360v/ServiceDispatcher
+[submodule "externals/mqtt_c"]
+	path = externals/mqtt_c
+	url = http://github.com/tom360v/mqtt_c
+[submodule "externals/serviceRGB"]
+	path = externals/serviceRGB
+	url = https://github.com/tom360v/serviceRGB

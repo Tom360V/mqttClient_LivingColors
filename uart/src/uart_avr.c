@@ -7,7 +7,6 @@
 #include "avr/io.h"
 #include "avr/interrupt.h"
 #include "uart.h"
-#include "TEMP.h"
 
 #if 0
   #if defined (__AVR_ATmega328P__)

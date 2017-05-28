@@ -13,3 +13,6 @@
 [submodule "externals/driver_esp8266"]
 	path = externals/driver_esp8266
 	url = https://github.com/tom360v/driver_esp8266
+[submodule "externals/fifo"]
+	path = externals/fifo
+	url = http://github.com/tom360v/fifo

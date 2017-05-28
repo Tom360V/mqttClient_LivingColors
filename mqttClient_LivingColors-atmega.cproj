@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega328P</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>mqttClient_LivingColors-atmega</AssemblyName>
+    <Name>mqttClient_LivingColors-atmega</Name>
+    <RootNamespace>mqttClient_LivingColors-atmega</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.34.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.jtagice3plus</avrtool>
+    <avrtoolserialnumber>J30200026222</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E950F</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_jtagice3plus>
+      <ToolOptions>
+        <InterfaceProperties>
+          <IspClock>125000</IspClock>
+        </InterfaceProperties>
+        <InterfaceName>debugWIRE</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.jtagice3plus</ToolType>
+      <ToolNumber>J30200026222</ToolNumber>
+      <ToolName>JTAGICE3</ToolName>
+    </com_atmel_avrdbg_tool_jtagice3plus>
+    <avrtoolinterface>debugWIRE</avrtoolinterface>
+    <avrtoolinterfaceclock>125000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\gcc\dev\atmega328p"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\gcc\dev\atmega328p"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
+            <Value>../Applications/LivingColors/inc</Value>
+            <Value>../externals/driver_esp8266/inc</Value>
+            <Value>../externals/fifo/inc</Value>
+            <Value>../externals/fsmEngine/inc</Value>
+            <Value>../externals/mqtt_c/inc</Value>
+            <Value>../externals/ServiceDispatcher/inc</Value>
+            <Value>../externals/serviceRGB/inc</Value>
+            <Value>../uart/inc</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Maximum (-g3)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.132\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Applications\LivingColors\inc\CC2500.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Applications\LivingColors\inc\ColourConversion.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Applications\LivingColors\inc\LivingColors.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Applications\LivingColors\src\CC2500.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Applications\LivingColors\src\ColourConversion.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Applications\LivingColors\src\LivingColors.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\driver_esp8266\inc\esp8266_sm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\driver_esp8266\src\esp8266_sm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\driver_esp8266\src\esp8266_sm_private.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\fifo\inc\fifo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\fifo\src\fifo.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\fsmEngine\inc\fsm.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\fsmEngine\src\fsm.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\mqtt_c\inc\Client.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\mqtt_c\inc\PubSubClient.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\mqtt_c\src\PubSubClient.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\ServiceDispatcher\inc\ServiceDispatcher.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\ServiceDispatcher\inc\ServiceDispatcherQueue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\ServiceDispatcher\inc\ServiceDispatcherRouter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\ServiceDispatcher\src\ServiceDispatcherQueue.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\ServiceDispatcher\src\ServiceDispatcherRouter.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\serviceRGB\inc\serviceRGBClient.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\serviceRGB\inc\serviceRGBServer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\serviceRGB\src\serviceRGB.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\serviceRGB\src\serviceRGBClient.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="externals\serviceRGB\src\serviceRGBServer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="uart\inc\uart.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="uart\src\uart_avr.c">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Applications\" />
+    <Folder Include="Applications\LivingColors\" />
+    <Folder Include="Applications\LivingColors\inc\" />
+    <Folder Include="Applications\LivingColors\src\" />
+    <Folder Include="externals\" />
+    <Folder Include="externals\driver_esp8266\" />
+    <Folder Include="externals\driver_esp8266\inc\" />
+    <Folder Include="externals\driver_esp8266\src\" />
+    <Folder Include="externals\fifo\" />
+    <Folder Include="externals\fifo\" />
+    <Folder Include="externals\fifo\inc\" />
+    <Folder Include="externals\fifo\src\" />
+    <Folder Include="externals\fsmEngine\" />
+    <Folder Include="externals\fsmEngine\inc\" />
+    <Folder Include="externals\fsmEngine\src\" />
+    <Folder Include="externals\mqtt_c\" />
+    <Folder Include="externals\mqtt_c\inc\" />
+    <Folder Include="externals\mqtt_c\src\" />
+    <Folder Include="externals\ServiceDispatcher\" />
+    <Folder Include="externals\ServiceDispatcher\inc\" />
+    <Folder Include="externals\ServiceDispatcher\src\" />
+    <Folder Include="externals\serviceRGB\" />
+    <Folder Include="externals\serviceRGB\inc\" />
+    <Folder Include="externals\serviceRGB\src\" />
+    <Folder Include="uart\" />
+    <Folder Include="uart\inc\" />
+    <Folder Include="uart\src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="externals\driver_esp8266\.git">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\driver_esp8266\.gitignore">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\driver_esp8266\esp8266.sm">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\driver_esp8266\LICENSE">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\driver_esp8266\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fifo\.git">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fifo\.gitattributes">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fifo\.gitignore">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fifo\.travis.yml">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fifo\CMakeLists.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fifo\README.md">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fsmEngine\.git">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fsmEngine\.gitignore">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fsmEngine\genFSM.py">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fsmEngine\LICENSE">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fsmEngine\Makefile">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\fsmEngine\README.md">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\mqtt_c\.git">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\mqtt_c\.gitignore">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\mqtt_c\CMakeLists.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\mqtt_c\LICENSE.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\mqtt_c\make.sh">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\ServiceDispatcher\.git">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\ServiceDispatcher\.gitignore">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\ServiceDispatcher\.gitmodules">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\ServiceDispatcher\.travis.yml">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\ServiceDispatcher\CMakeLists.txt">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\ServiceDispatcher\make.sh">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\ServiceDispatcher\README.md">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\serviceRGB\.git">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\serviceRGB\.gitattributes">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\serviceRGB\.gitignore">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="externals\serviceRGB\CMakeLists.txt">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

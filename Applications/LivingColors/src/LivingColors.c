@@ -351,8 +351,7 @@ void LivingColors_setLampColourHSV(unsigned char index, unsigned char h, unsigne
     sendCommand(index, 0x03, h, s, v);
 }
 
-void LivingColors_turnLampOnRGB(unsigned char index, unsigned char r, unsigned char g,
-    unsigned char b)
+void LivingColors_turnLampOnRGB(unsigned char index, unsigned char r, unsigned char g, unsigned char b)
 {
     // convert rgb to hsv
     unsigned char h = 0;
@@ -364,8 +363,7 @@ void LivingColors_turnLampOnRGB(unsigned char index, unsigned char r, unsigned c
     sendCommand(index, 0x05, h, s, v);
 }
 
-void LivingColors_turnLampOnHSV(unsigned char index, unsigned char h, unsigned char s,
-    unsigned char v)
+void LivingColors_turnLampOnHSV(unsigned char index, unsigned char h, unsigned char s, unsigned char v)
 {
     sendCommand(index, 0x05, h, s, v);
 }
@@ -422,8 +420,7 @@ void LivingColors_checkAddress(unsigned char* address)
     ++m_numLamps;
 }
 
-void sendCommand(unsigned char index, unsigned char command, unsigned char h,
-    unsigned char s, unsigned char v)
+void sendCommand(unsigned char index, unsigned char command, unsigned char h, unsigned char s, unsigned char v)
 {
     // index and address must be valid
     if ((index < m_numLamps) && (m_lamps[index][0] != 0)) {
